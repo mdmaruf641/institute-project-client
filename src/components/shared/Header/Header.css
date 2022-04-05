@@ -1,0 +1,23 @@
+.main-nav {
+  box-shadow: 0 -8px 14px 5px #b8b8b8;
+}
+
+.logo {
+  color: #e55523;
+}
+
+.cart-nbr {
+  position: relative;
+  top: -6px !important;
+  font-size: 17px !important;
+  padding-left: 6px !important;
+  padding-top: 1px !important;
+  background-color: #e55523 !important;
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50% !important;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  -ms-border-radius: 50% !important;
+  -o-border-radius: 50% !important;
+}
