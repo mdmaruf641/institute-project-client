@@ -9,39 +9,46 @@ import Login from "./components/pages/Login/Login";
 import Register from "./components/pages/Register/Register";
 import NotFound from "./components/pages/NotFound/NotFound";
 import Header from "./components/shared/Header/Header";
+import AuthProvider from "./contexts/AuthProvider";
+import DashboardHome from "./components/pages/Dashboard/DashboardHome/DashboardHome";
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Header></Header>
-        <Switch>
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-          <Route path="/home">
-            <Home></Home>
-          </Route>
-          <Route path="/about">
-            <About></About>
-          </Route>
-          <Route path="/allCourses">
-            <AllCourses></AllCourses>
-          </Route>
-          <Route path="/cart">
-            <Cart></Cart>
-          </Route>
-          <Route path="/login">
-            <Login></Login>
-          </Route>
-          <Route path="/register">
-            <Register></Register>
-          </Route>
-          <Route path="*">
-            <NotFound></NotFound>
-          </Route>
-        </Switch>
-      </Router>
+    <div className="">
+      <AuthProvider>
+        <Router>
+          <Header></Header>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
+            <Route path="/about">
+              <About></About>
+            </Route>
+            <Route path="/allCourses">
+              <AllCourses></AllCourses>
+            </Route>
+            <Route path="/cart">
+              <Cart></Cart>
+            </Route>
+            <Route path="/dashboard">
+              <DashboardHome></DashboardHome>
+            </Route>
+            <Route path="/login">
+              <Login></Login>
+            </Route>
+            <Route path="/register">
+              <Register></Register>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
+          </Switch>
+        </Router>
+      </AuthProvider>
     </div>
   );
 }
