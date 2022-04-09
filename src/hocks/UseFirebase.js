@@ -4,6 +4,7 @@ import {
   signInWithPopup,
   getAuth,
   GoogleAuthProvider,
+  FacebookAuthProvider,
   onAuthStateChanged,
   signOut,
 } from "firebase/auth";
@@ -13,6 +14,7 @@ firebaseInitialization();
 
 // providers
 const GoogleProvider = new GoogleAuthProvider();
+const FacebookProvider = new FacebookAuthProvider();
 
 const auth = getAuth();
 
@@ -24,6 +26,18 @@ const UseFirebase = () => {
   // sign in with google
   const signInWithGoogle = () => {
     signInWithPopup(auth, GoogleProvider)
+      .then((result) => {
+        setUser(result.user);
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+  };
+
+  // sign in with facebook
+
+  const signInWithFacebook = () => {
+    signInWithPopup(auth, FacebookProvider)
       .then((result) => {
         setUser(result.user);
       })
@@ -62,6 +76,7 @@ const UseFirebase = () => {
     error,
     logOut,
     signInWithGoogle,
+    signInWithFacebook,
   };
 };
 

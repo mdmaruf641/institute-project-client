@@ -6,6 +6,10 @@
   color: #e55523;
 }
 
+.dropdown-menu.show {
+  left: -50px;
+}
+
 .cart-nbr {
   position: relative;
   top: -6px !important;

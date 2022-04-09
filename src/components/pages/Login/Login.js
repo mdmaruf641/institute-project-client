@@ -7,7 +7,7 @@ import facebook from "../../../assets/images/facebook.png";
 import UseAuth from "../../../hocks/UseAuth";
 
 const Login = () => {
-  const { signInWithGoogle } = UseAuth();
+  const { signInWithGoogle, signInWithFacebook } = UseAuth();
 
   return (
     <div>
@@ -54,7 +54,7 @@ const Login = () => {
                 </button>
               </div>
               <div>
-                <button>
+                <button onClick={signInWithFacebook}>
                   <img src={facebook} alt="facebook" />
                 </button>
               </div>
