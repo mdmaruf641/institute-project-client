@@ -16,19 +16,30 @@ const Login = () => {
           {" "}
           <h1 className="mb-4 ">Login</h1>
           <Form>
-            <Form.Control
-              name="email"
-              required
-              type="email"
-              placeholder="Your Email"
-            />
+            <div className="form-group">
+              <Form.Control
+                className="input-field"
+                name="email"
+                autocomplete="off"
+                required
+                type="email"
+              />
+              <label className="form-label" htmlFor="email">
+                Email
+              </label>
+            </div>
             <br />
-            <Form.Control
-              name="password"
-              required
-              type="password"
-              placeholder="Your Password"
-            />
+            <div className="form-group">
+              <Form.Control
+                className="input-field"
+                name="password"
+                required
+                type="password"
+              />
+              <label className="form-label" htmlFor="password">
+                Password
+              </label>
+            </div>
             <br />
 
             <button className="button" type="submit">

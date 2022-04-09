@@ -12,7 +12,7 @@ const Header = () => {
 
   return (
     <div>
-      <Navbar className="main-nav" expand="lg">
+      <Navbar sticky="top" className="main-nav" expand="lg">
         <Container>
           <Navbar.Brand to="/home">
             <h5 className="logo">Institute Project</h5>

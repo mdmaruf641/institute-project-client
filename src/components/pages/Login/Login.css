@@ -11,6 +11,47 @@
   -o-border-radius: 15px;
 }
 
+.form-group {
+  position: relative;
+  height: 40px;
+}
+
+.input-field {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: none;
+}
+
+.input-field:focus {
+  box-shadow: none;
+  border: 1px solid #ff5400;
+}
+
+.form-group .form-label {
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  color: #9a9a9a;
+  background-color: #fff;
+  padding: 0px 5px 0px 5px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.input-field:focus + .form-label,
+.input-field:not(:placeholder-shown).input-field:not(:focus) + .form-label {
+  color: #ff5400;
+  font-size: 15px;
+  top: -10px;
+  left: 6px;
+  z-index: 10;
+}
+
 .button {
   background-color: #ff5400;
   border: 2px solid transparent;
