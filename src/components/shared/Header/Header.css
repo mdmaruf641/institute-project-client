@@ -6,6 +6,15 @@
   color: #e55523;
 }
 
+button.navbar-toggler {
+  border: none;
+  color: #e55523;
+}
+
+button.navbar-toggler:focus {
+  box-shadow: none;
+}
+
 .dropdown-menu.show {
   left: -50px;
 }

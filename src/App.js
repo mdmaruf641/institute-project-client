@@ -11,6 +11,7 @@ import NotFound from "./components/pages/NotFound/NotFound";
 import Header from "./components/shared/Header/Header";
 import AuthProvider from "./contexts/AuthProvider";
 import DashboardHome from "./components/pages/Dashboard/DashboardHome/DashboardHome";
+import ResetPass from "./components/pages/ResetPass/ResetPass";
 
 function App() {
   return (
@@ -39,6 +40,9 @@ function App() {
             </Route>
             <Route path="/login">
               <Login></Login>
+            </Route>
+            <Route path="/reset">
+              <ResetPass></ResetPass>
             </Route>
             <Route path="/register">
               <Register></Register>

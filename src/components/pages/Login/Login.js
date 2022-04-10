@@ -7,7 +7,14 @@ import facebook from "../../../assets/images/facebook.png";
 import UseAuth from "../../../hocks/UseAuth";
 
 const Login = () => {
-  const { signInWithGoogle, signInWithFacebook } = UseAuth();
+  const {
+    signInWithGoogle,
+    signInWithFacebook,
+    signInWithEmail,
+    getEmail,
+    getPassword,
+    error,
+  } = UseAuth();
 
   return (
     <div>
@@ -15,12 +22,13 @@ const Login = () => {
         <div className="form-container text-center">
           {" "}
           <h1 className="mb-4 ">Login</h1>
-          <Form>
+          <Form onSubmit={signInWithEmail}>
             <div className="form-group">
               <Form.Control
+                onBlur={getEmail}
                 className="input-field"
                 name="email"
-                autocomplete="off"
+                autoComplete="off"
                 required
                 type="email"
               />
@@ -31,6 +39,7 @@ const Login = () => {
             <br />
             <div className="form-group">
               <Form.Control
+                onBlur={getPassword}
                 className="input-field"
                 name="password"
                 required
@@ -42,6 +51,7 @@ const Login = () => {
             </div>
             <br />
 
+            <p className="text-danger text-center">{error}</p>
             <button className="button" type="submit">
               Login
             </button>
@@ -77,6 +87,13 @@ const Login = () => {
             to="/register"
           >
             New User? Please Sign Up
+          </Nav.Link>
+          <Nav.Link
+            as={NavLink}
+            className="my-3 d-block text-decoration-none"
+            to="/reset"
+          >
+            Forget password? Reset.
           </Nav.Link>
         </div>
       </Container>
