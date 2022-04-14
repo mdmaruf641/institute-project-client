@@ -19,7 +19,7 @@ const Footer = () => {
             <div className="col-lg-5 col-md-6 col-12">
               <div className="col-head">
                 <h3>
-                  Institute <span style={{ color: "#E67E22" }}>Project</span>
+                  Institute <span style={{ color: "#08a9e6" }}>Project</span>
                 </h3>
               </div>
               <div className="col-items contact-main mt-4">

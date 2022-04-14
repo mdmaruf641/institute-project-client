@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Form, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import UseAuth from "../../../hocks/UseAuth";
+import "../../shared/CommonStyles/CommonStyles.css";
 
 const Register = () => {
   const { registerUser, getEmail, getPassword, getName, getPhotoURL, error } =

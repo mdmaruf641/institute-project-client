@@ -1,0 +1,40 @@
+.banner-area {
+  margin-top: 100px;
+}
+
+.banner-area p {
+  font-size: 18px;
+  color: #08a9e6;
+  margin: 0;
+}
+
+.banner-area h1 {
+  font-size: 49px;
+  font-weight: 700;
+  color: #21225f;
+}
+
+/* for responsive */
+@media only screen and (max-width: 688px) {
+  .banner-area {
+    margin-top: 90px;
+  }
+  .banner-img {
+    margin-top: 40px;
+    text-align: center;
+  }
+  .banner-area h1 {
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .banner-area img {
+    width: 250px !important;
+  }
+}
+
+@media only screen and (min-width: 688px) and (max-width: 992px) {
+  #banner h1 {
+    font-size: 60px;
+    margin: 15px 0;
+  }
+}

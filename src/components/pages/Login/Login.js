@@ -5,6 +5,7 @@ import "./Login.css";
 import google from "../../../assets/images/google.png";
 import facebook from "../../../assets/images/facebook.png";
 import UseAuth from "../../../hocks/UseAuth";
+import "../../shared/CommonStyles/CommonStyles.css";
 
 const Login = () => {
   const {

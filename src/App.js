@@ -15,7 +15,7 @@ import ResetPass from "./components/pages/ResetPass/ResetPass";
 
 function App() {
   return (
-    <div className="">
+    <div className="app">
       <AuthProvider>
         <Router>
           <Header></Header>

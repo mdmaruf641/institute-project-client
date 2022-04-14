@@ -15,7 +15,7 @@
 }
 
 .contact-info:hover .footer-icon {
-  color: #e67e2a;
+  color: #08a9e6;
 }
 
 .footer-nav {
@@ -27,7 +27,7 @@
   -o-transition: 0.2s;
 }
 .footer-nav:hover {
-  color: #e67e2a !important;
+  color: #08a9e6 !important;
   margin-left: 3px;
 }
 
@@ -43,7 +43,7 @@
 }
 
 .footer-copyright p a {
-  color: #e67e2a;
+  color: #08a9e6;
   text-decoration: none !important;
 }
 

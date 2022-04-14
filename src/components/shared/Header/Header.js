@@ -12,7 +12,12 @@ const Header = () => {
 
   return (
     <div>
-      <Navbar sticky="top" className="main-nav" expand="lg">
+      <Navbar
+        style={{ background: "#fff" }}
+        fixed="top"
+        className="main-nav"
+        expand="lg"
+      >
         <Container>
           <Navbar.Brand to="/home">
             <h5 className="logo">Institute Project</h5>
@@ -39,7 +44,7 @@ const Header = () => {
                 className="fs-6 color-dark fw-bold"
                 to="/featured"
               >
-                Featured Courses
+                Popular Courses
               </Nav.Link>
               <Nav.Link
                 as={NavLink}
