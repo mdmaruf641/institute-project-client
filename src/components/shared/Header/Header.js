@@ -1,6 +1,7 @@
 import React from "react";
 import { Badge, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import "./Header.css";
+import { HashLink } from "react-router-hash-link";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
@@ -19,7 +20,7 @@ const Header = () => {
         expand="lg"
       >
         <Container>
-          <Navbar.Brand to="/home">
+          <Navbar.Brand to="/home#home">
             <h5 className="logo">Institute Project</h5>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -40,12 +41,13 @@ const Header = () => {
                 About
               </Nav.Link>
               <Nav.Link
-                as={NavLink}
+                as={HashLink}
                 className="fs-6 color-dark fw-bold"
-                to="/featured"
+                to="/home#featured"
               >
                 Popular Courses
               </Nav.Link>
+
               <Nav.Link
                 as={NavLink}
                 className="fs-6 color-dark fw-bold"

@@ -12,6 +12,8 @@ import Header from "./components/shared/Header/Header";
 import AuthProvider from "./contexts/AuthProvider";
 import DashboardHome from "./components/pages/Dashboard/DashboardHome/DashboardHome";
 import ResetPass from "./components/pages/ResetPass/ResetPass";
+import AddCourses from "./components/pages/Dashboard/AddCourses/AddCourses";
+import CourseDetails from "./components/pages/CourseDetails/CourseDetails";
 
 function App() {
   return (
@@ -37,6 +39,12 @@ function App() {
             </Route>
             <Route path="/dashboard">
               <DashboardHome></DashboardHome>
+            </Route>
+            <Route path="/addCourses">
+              <AddCourses></AddCourses>
+            </Route>
+            <Route path="/courseDetails">
+              <CourseDetails></CourseDetails>
             </Route>
             <Route path="/login">
               <Login></Login>

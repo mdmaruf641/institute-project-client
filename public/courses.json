@@ -1,14 +1,12 @@
 [
   {
     "key": 1,
-    "img": "https://hasan-images.netlify.app/react.jpg",
-    "title": "The Creative React and Redux Course",
-    "desc": "Build 3 Awesome Web Applications With React!",
+    "img": "https://i.ibb.co/s9c1716/courses1-img.jpg",
+    "title": "Basic knowledge about accounting",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsa natus sapiente voluptatibus placeat temporibus doloremque itaque odit aperiam ab",
     "price": 29.99,
-    "provider": "Hasan",
-    "rating": 5,
-    "ratingCount": "320",
-    "sellerThumb": "https://hasan-images.netlify.app/hasan.png"
+    "provider": "Maruf",
+    "sellerThumb": "https://i.ibb.co/7kgnQ0z/course-instructor-img.jpg"
   },
   {
     "key": 2,
@@ -19,7 +17,7 @@
     "provider": "Hasan",
     "rating": 4.2,
     "ratingCount": "450",
-    "sellerThumb": "https://hasan-images.netlify.app/hasan.png"
+    "sellerThumb": "https://i.ibb.co/7kgnQ0z/course-instructor-img.jpg"
   },
   {
     "key": 3,
@@ -30,7 +28,7 @@
     "provider": "Hasan",
     "rating": 4,
     "ratingCount": "680",
-    "sellerThumb": "https://hasan-images.netlify.app/hasan.png"
+    "sellerThumb": "https://i.ibb.co/7kgnQ0z/course-instructor-img.jpg"
   },
   {
     "key": 4,
@@ -41,7 +39,7 @@
     "provider": "Hasan",
     "rating": 3.5,
     "ratingCount": "350",
-    "sellerThumb": "https://hasan-images.netlify.app/hasan.png"
+    "sellerThumb": "https://i.ibb.co/7kgnQ0z/course-instructor-img.jpg"
   },
   {
     "key": 5,
@@ -52,7 +50,7 @@
     "provider": "Hasan",
     "rating": 4.5,
     "ratingCount": "560",
-    "sellerThumb": "https://hasan-images.netlify.app/hasan.png"
+    "sellerThumb": "https://i.ibb.co/7kgnQ0z/course-instructor-img.jpg"
   },
   {
     "key": 6,
@@ -63,7 +61,7 @@
     "provider": "Hasan",
     "rating": 4.0,
     "ratingCount": "500",
-    "sellerThumb": "https://hasan-images.netlify.app/hasan.png"
+    "sellerThumb": "https://i.ibb.co/7kgnQ0z/course-instructor-img.jpg"
   },
   {
     "key": 7,
@@ -74,7 +72,7 @@
     "provider": "Hasan",
     "rating": 3.5,
     "ratingCount": "500",
-    "sellerThumb": "https://hasan-images.netlify.app/hasan.png"
+    "sellerThumb": "https://i.ibb.co/7kgnQ0z/course-instructor-img.jpg"
   },
   {
     "key": 8,
@@ -85,7 +83,7 @@
     "provider": "Hasan",
     "rating": 4.5,
     "ratingCount": "500",
-    "sellerThumb": "https://hasan-images.netlify.app/hasan.png"
+    "sellerThumb": "https://i.ibb.co/7kgnQ0z/course-instructor-img.jpg"
   },
   {
     "key": 9,
@@ -96,6 +94,6 @@
     "provider": "Hasan",
     "rating": 4.0,
     "ratingCount": "500",
-    "sellerThumb": "https://hasan-images.netlify.app/hasan.png"
+    "sellerThumb": "https://i.ibb.co/7kgnQ0z/course-instructor-img.jpg"
   }
 ]

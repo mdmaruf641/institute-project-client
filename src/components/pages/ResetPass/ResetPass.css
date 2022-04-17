@@ -1,0 +1,19 @@
+.reset-pass-input {
+  height: 45px;
+}
+
+input.reset-pass-input.form-control {
+  box-shadow: none;
+}
+
+.reset-pass-btn {
+  margin: 0;
+}
+.reset-pass-btn:hover {
+  background: #21225f;
+  border: 2px solid #21225f;
+}
+
+button#button-addon2 {
+  box-shadow: none;
+}

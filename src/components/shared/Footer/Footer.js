@@ -12,7 +12,7 @@ import paymentImg from "../../../assets/images/payment.png";
 
 const Footer = () => {
   return (
-    <div>
+    <div id="footer">
       <div className="footer-main text-white">
         <Container>
           <Row className="footer-area">
