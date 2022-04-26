@@ -1,18 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { Card, Col, Container, Row } from "react-bootstrap";
+import React from "react";
+import { Container, Row } from "react-bootstrap";
 import "./FeaturedCourses.css";
 import "../../../shared/CommonStyles/CommonStyles.css";
-import courseImg from "../../../../assets/images/courses1-img.jpg";
-import courseInsImg from "../../../../assets/images/course-instructor-img.jpg";
 import FeaturedCourse from "../FeaturedCourse/FeaturedCourse";
+import UseAuth from "../../../../hocks/UseAuth";
 
 const FeaturedCourses = () => {
-  const [courses, setCourses] = useState([]);
-  useEffect(() => {
-    fetch("http://localhost:5000/courses")
-      .then((res) => res.json())
-      .then((data) => setCourses(data));
-  }, []);
+  const { courses } = UseAuth();
+
   return (
     <div id="featured" className="mt-5">
       <Container>

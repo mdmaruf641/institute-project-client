@@ -8,6 +8,8 @@ import UseAuth from "../../../hocks/UseAuth";
 import "../../shared/CommonStyles/CommonStyles.css";
 
 const Login = () => {
+  const { AllContexts } = UseAuth();
+
   const {
     signInWithGoogle,
     signInWithFacebook,
@@ -15,7 +17,7 @@ const Login = () => {
     getEmail,
     getPassword,
     error,
-  } = UseAuth();
+  } = AllContexts;
 
   return (
     <div>

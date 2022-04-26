@@ -31,7 +31,7 @@ function App() {
             <Route path="/about">
               <About></About>
             </Route>
-            <Route path="/allCourses">
+            <Route exact path="/allCourses">
               <AllCourses></AllCourses>
             </Route>
             <Route path="/cart">
@@ -43,7 +43,7 @@ function App() {
             <Route path="/addCourses">
               <AddCourses></AddCourses>
             </Route>
-            <Route path="/courseDetails">
+            <Route path="/courseDetails/:_id">
               <CourseDetails></CourseDetails>
             </Route>
             <Route path="/login">

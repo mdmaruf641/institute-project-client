@@ -5,8 +5,10 @@ import UseAuth from "../../../hocks/UseAuth";
 import "../../shared/CommonStyles/CommonStyles.css";
 
 const Register = () => {
+  const { AllContexts } = UseAuth();
+
   const { registerUser, getEmail, getPassword, getName, getPhotoURL, error } =
-    UseAuth();
+    AllContexts;
 
   return (
     <div>

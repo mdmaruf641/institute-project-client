@@ -8,7 +8,8 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import UseAuth from "../../../hocks/UseAuth";
 
 const Header = () => {
-  const { user, logOut } = UseAuth();
+  const { AllContexts } = UseAuth();
+  const { user, logOut } = AllContexts;
   const { displayName, photoURL, email } = user;
 
   return (

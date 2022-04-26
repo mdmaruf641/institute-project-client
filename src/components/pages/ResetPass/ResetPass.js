@@ -10,7 +10,9 @@ import UseAuth from "../../../hocks/UseAuth";
 import "./ResetPass.css";
 
 const ResetPass = () => {
-  const { getEmail, resetPassword, error } = UseAuth();
+  const { AllContexts } = UseAuth();
+  const { getEmail, resetPassword, error } = AllContexts;
+
   return (
     <div>
       <Container style={{ width: "400px", marginTop: "100px" }}>
