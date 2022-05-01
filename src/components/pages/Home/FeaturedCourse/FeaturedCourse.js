@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Col } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
+import UseAuth from "../../../../hocks/UseAuth";
 import "./FeaturedCourse.css";
 
 const FeaturedCourse = (props) => {
@@ -10,10 +11,10 @@ const FeaturedCourse = (props) => {
     title,
     subject,
     instructorImg,
-    instructorName,
     coursePrice,
     description,
   } = props.course;
+  const { addToCart } = UseAuth();
 
   // handle course details btn
   const history = useHistory();
@@ -35,13 +36,18 @@ const FeaturedCourse = (props) => {
               {description.slice(0, 150)}...
             </Card.Text>
             <div className="course-price">
-              <h4>${coursePrice}</h4>
+              <h4> Price: ${coursePrice}</h4>
             </div>
             <div className="d-flex justify-content-between">
               <button onClick={handleCourseDetails} className="button">
                 View More
               </button>
-              <button className="button">Add to Cart</button>
+              <button
+                onClick={() => addToCart(props.course)}
+                className="button"
+              >
+                Add to Cart
+              </button>
             </div>
           </Card.Body>
         </Card>

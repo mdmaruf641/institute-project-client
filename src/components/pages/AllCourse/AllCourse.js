@@ -1,7 +1,9 @@
 import React from "react";
 import { Card, Col } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
+import UseAuth from "./../../../hocks/UseAuth";
 const AllCourse = (props) => {
+  const { addToCart } = UseAuth();
   const {
     _id,
     courseImg,
@@ -39,7 +41,12 @@ const AllCourse = (props) => {
               <button onClick={handleCourseDetails} className="button">
                 View More
               </button>
-              <button className="button">Add to Cart</button>
+              <button
+                onClick={() => addToCart(props.course)}
+                className="button"
+              >
+                Add to Cart
+              </button>
             </div>
           </Card.Body>
         </Card>

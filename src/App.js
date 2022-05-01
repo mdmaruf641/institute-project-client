@@ -14,6 +14,7 @@ import DashboardHome from "./components/pages/Dashboard/DashboardHome/DashboardH
 import ResetPass from "./components/pages/ResetPass/ResetPass";
 import AddCourses from "./components/pages/Dashboard/AddCourses/AddCourses";
 import CourseDetails from "./components/pages/CourseDetails/CourseDetails";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -34,9 +35,9 @@ function App() {
             <Route exact path="/allCourses">
               <AllCourses></AllCourses>
             </Route>
-            <Route path="/cart">
+            <PrivateRoute path="/cart">
               <Cart></Cart>
-            </Route>
+            </PrivateRoute>
             <Route path="/dashboard">
               <DashboardHome></DashboardHome>
             </Route>

@@ -41,24 +41,12 @@ const UseFirebase = () => {
 
   // sign in with google
   const signInWithGoogle = () => {
-    signInWithPopup(auth, GoogleProvider)
-      .then((result) => {
-        setUser(result.user);
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
+    return signInWithPopup(auth, GoogleProvider);
   };
 
   // sign in with facebook
   const signInWithFacebook = () => {
-    signInWithPopup(auth, FacebookProvider)
-      .then((result) => {
-        setUser(result.user);
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
+    return signInWithPopup(auth, FacebookProvider);
   };
 
   // Sign up with email
@@ -99,13 +87,7 @@ const UseFirebase = () => {
   // Sign in with email
   const signInWithEmail = (e) => {
     e.preventDefault();
-    signInWithEmailAndPassword(auth, email, password)
-      .then((result) => {
-        setUser(result.user);
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
+    return signInWithEmailAndPassword(auth, email, password);
   };
 
   // reset password
@@ -164,7 +146,9 @@ const UseFirebase = () => {
 
   return {
     user,
+    setUser,
     error,
+    setError,
     logOut,
     signInWithGoogle,
     signInWithFacebook,

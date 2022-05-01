@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Container, Row, Spinner } from "react-bootstrap";
 import { useParams } from "react-router-dom";
-import UseAuth from "../../../hocks/UseAuth";
 import Footer from "../../shared/Footer/Footer";
 import "./CourseDetails.css";
+import UseAuth from "./../../../hocks/UseAuth";
 
 const CourseDetails = () => {
   const { _id } = useParams();
-  const { courses } = UseAuth();
+  const { courses, addToCart } = UseAuth();
   const matchingCourse = courses.find((course) => course._id === _id);
 
   const selected = matchingCourse?._id;
@@ -43,7 +43,12 @@ const CourseDetails = () => {
                         <span>Price:</span> ${matchingCourse.coursePrice}
                       </h3>
                       <button className="button me-2">Purchase</button>
-                      <button className="button">Add to Cart</button>
+                      <button
+                        onClick={() => addToCart(matchingCourse)}
+                        className="button"
+                      >
+                        Add to Cart
+                      </button>
                     </div>
                     <div className="text-center">
                       <img src={matchingCourse.instructorImg} alt="" />

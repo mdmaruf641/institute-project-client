@@ -1,0 +1,20 @@
+.cart-body {
+  margin-bottom: 50px;
+}
+
+.cart-area {
+  margin-top: 25px;
+  padding: 12px 0;
+  border: 2px solid gray;
+}
+
+.cart-area:first-child {
+  margin-top: 0;
+}
+
+.cart-area .button {
+  letter-spacing: 0;
+  font-size: 16px;
+  padding: 5px 13px;
+  margin: 0px 5px;
+}

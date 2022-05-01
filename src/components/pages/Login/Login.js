@@ -6,17 +6,22 @@ import google from "../../../assets/images/google.png";
 import facebook from "../../../assets/images/facebook.png";
 import UseAuth from "../../../hocks/UseAuth";
 import "../../shared/CommonStyles/CommonStyles.css";
+import { useLocation, useHistory } from "react-router-dom";
 
 const Login = () => {
   const { AllContexts } = UseAuth();
-
+  const history = useHistory();
+  const location = useLocation();
+  const redirect = location?.state?.from || "/home";
   const {
     signInWithGoogle,
     signInWithFacebook,
     signInWithEmail,
     getEmail,
     getPassword,
+    setUser,
     error,
+    setError,
   } = AllContexts;
 
   return (
@@ -25,7 +30,18 @@ const Login = () => {
         <div className="form-container text-center">
           {" "}
           <h1 className="mb-4 ">Login</h1>
-          <Form onSubmit={signInWithEmail}>
+          <Form
+            onSubmit={() =>
+              signInWithEmail()
+                .then((result) => {
+                  setUser(result.user);
+                  history.push(redirect);
+                })
+                .catch((error) => {
+                  setError(error.message);
+                })
+            }
+          >
             <div className="form-group">
               <Form.Control
                 onBlur={getEmail}
@@ -54,7 +70,7 @@ const Login = () => {
             </div>
             <br />
 
-            <p className="text-danger text-center">{error}</p>
+            <p className="text-danger m-0 text-center">{error}</p>
             <button className="button" type="submit">
               Login
             </button>
@@ -62,12 +78,34 @@ const Login = () => {
           <div className="mt-3">
             <div className="login-items-logo d-flex justify-content-around align-items-center">
               <div>
-                <button onClick={signInWithGoogle}>
+                <button
+                  onClick={() =>
+                    signInWithGoogle()
+                      .then((result) => {
+                        setUser(result.user);
+                        history.push(redirect);
+                      })
+                      .catch((error) => {
+                        setError(error.message);
+                      })
+                  }
+                >
                   <img src={google} alt="google" />
                 </button>
               </div>
               <div>
-                <button onClick={signInWithFacebook}>
+                <button
+                  onClick={() =>
+                    signInWithFacebook()
+                      .then((result) => {
+                        setUser(result.user);
+                        history.push(redirect);
+                      })
+                      .catch((error) => {
+                        setError(error.message);
+                      })
+                  }
+                >
                   <img src={facebook} alt="facebook" />
                 </button>
               </div>

@@ -2,13 +2,23 @@ import React from "react";
 import { Container, Form, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import UseAuth from "../../../hocks/UseAuth";
+import { useLocation, useHistory } from "react-router-dom";
 import "../../shared/CommonStyles/CommonStyles.css";
 
 const Register = () => {
   const { AllContexts } = UseAuth();
 
-  const { registerUser, getEmail, getPassword, getName, getPhotoURL, error } =
-    AllContexts;
+  const {
+    registerUser,
+    emailVerification,
+    setUserNameAndImage,
+    getEmail,
+    getPassword,
+    getName,
+    getPhotoURL,
+    setError,
+    error,
+  } = AllContexts;
 
   return (
     <div>

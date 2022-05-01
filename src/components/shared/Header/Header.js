@@ -8,7 +8,7 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import UseAuth from "../../../hocks/UseAuth";
 
 const Header = () => {
-  const { AllContexts } = UseAuth();
+  const { AllContexts, selectedCourse } = UseAuth();
   const { user, logOut } = AllContexts;
   const { displayName, photoURL, email } = user;
 
@@ -62,7 +62,7 @@ const Header = () => {
                 to="/cart"
               >
                 <FontAwesomeIcon className="fs-5" icon={faShoppingCart} />
-                <Badge className="cart-nbr">0</Badge>
+                <Badge className="cart-nbr">{selectedCourse.length}</Badge>
               </Nav.Link>
               <Nav.Link
                 as={NavLink}
